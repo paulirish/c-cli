@@ -6,7 +6,6 @@
 // Performance-wise they appear to be pretty much the same.
 
 const fs = require('fs');
-const path = require('path');
 
 const emphasize = require('emphasize');
 
@@ -15,9 +14,8 @@ if (!filePath) {
     console.error('USAGE: c filename.ext');
     process.exit(1);
 }
-const resolvedPath = path.resolve(process.cwd(), filePath);
 
-const doc = fs.readFileSync(resolvedPath, 'utf8');
+const doc = fs.readFileSync(filePath, 'utf8');
 const output = emphasize.highlightAuto(doc).value;
 
 process.stdout.write(output);
