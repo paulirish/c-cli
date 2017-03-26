@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
+// I used to do this with pygmentize, but depending on Pygments/easy_install/pip was getting annoying.
+//     sudo easy_install -U Pygments
+//     alias c='pygmentize -O style=monokai -f console256 -g'
+// Performance-wise they appear to be pretty much the same.
+
 const fs = require('fs');
 const path = require('path');
 
