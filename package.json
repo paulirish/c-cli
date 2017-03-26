@@ -1,7 +1,10 @@
 {
-  "name": "c",
+  "name": "c-cli",
+  "description": "Like `cat` but with color.",
   "version": "1.0.0",
-  "main": "cli.js",
+  "bin": {
+    "c": "cli.js"
+  },
   "license": "MIT",
   "dependencies": {
     "emphasize": "^1.2.0"
